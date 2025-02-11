@@ -32,27 +32,8 @@ const Celda = () => {
 
     const handleContextMenu = (event) => {
         event.preventDefault();
-
-        const menuWidth = 200; // Suponiendo un ancho aproximado para el menú
-        const menuHeight = 100; // Suponiendo una altura aproximada para el menú
-        const { clientX, clientY } = event;
-
-        // Ajustar la posición para no desbordarse por los bordes de la pantalla
-        let adjustedX = clientX;
-        let adjustedY = clientY;
-
-        // Evitar que el menú se desborde por el lado derecho
-        if (clientX + menuWidth > window.innerWidth) {
-            adjustedX = window.innerWidth - menuWidth - 10; // 10px de margen
-        }
-
-        // Evitar que el menú se desborde por la parte inferior
-        if (clientY + menuHeight > window.innerHeight) {
-            adjustedY = window.innerHeight - menuHeight - 10; // 10px de margen
-        }
-
-        setMenuPosition({ x: adjustedX, y: adjustedY });
         setIsMenuOpen(true);
+        setMenuPosition({ x: event.clientX, y: event.clientY });
     };
 
     const closeMenu = () => {
