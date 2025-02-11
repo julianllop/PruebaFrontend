@@ -15,7 +15,7 @@ Este repositorio contiene una aplicación desarrollada como parte de una prueba 
 1. Clona este repositorio en tu máquina local.
    
    ```bash
-   git clone https://github.com/tu-usuario/tu-repositorio.git
+   https://github.com/tu-usuario/PruebaFrontend.git
 
 2. Dirígete a la carpeta /client dentro del proyecto.
    ```bash
